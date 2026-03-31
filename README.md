@@ -4,7 +4,7 @@ A comprehensive web application for managing data quality issues through AI-powe
 
 **Live URL**: https://team-pikachu-5f4c8.firebaseapp.com/
 
-## 🚀 Features
+##  Features
 
 - **Dashboard**: Overview of data quality metrics and pending issues
 - **File Upload & Analysis**: Upload Excel files and analyze data quality issues using AI
@@ -15,7 +15,7 @@ A comprehensive web application for managing data quality issues through AI-powe
 - **History Tracking**: Monitor remediated vs. ignored issues over time
 - **GCP Integration**: Generate automated GCP CLI commands for issue resolution
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 ### Frontend
 - **React 18** - Modern React with hooks and functional components
@@ -35,13 +35,13 @@ A comprehensive web application for managing data quality issues through AI-powe
 - **Pandas** - Data manipulation and analysis
 - **Werkzeug** - WSGI utilities
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - **Node.js** (v16 or higher) - [Install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 - **Python** (v3.8 or higher)
 - **Google Gemini API Key** - [Get from Google AI Studio](https://makersuite.google.com/app/apikey)
 
-## 🔧 Installation & Setup
+##  Installation & Setup
 
 ### Frontend Setup
 
@@ -139,7 +139,7 @@ For production deployment, set these environment variables:
 
 - `GEMINI_API_KEY`: Your Google Gemini API key
 
-## 📖 Usage
+##  Usage
 
 1. **Access the Application**
    - Open your browser and navigate to the deployed frontend URL
@@ -165,100 +165,6 @@ For production deployment, set these environment variables:
    - Use the History page to monitor resolved vs. pending issues
    - Dashboard provides metrics and insights
 
-## 📁 Project Structure
 
-```
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── ui/             # shadcn/ui components
-│   │   ├── FileUpload.tsx  # File upload component
-│   │   ├── Layout.tsx      # Main layout wrapper
-│   │   └── AppSidebar.tsx  # Navigation sidebar
-│   ├── contexts/           # React contexts
-│   │   └── IssuesContext.tsx # Issues state management
-│   ├── pages/              # Page components
-│   │   ├── Dashboard.tsx   # Main dashboard
-│   │   ├── Issues.tsx      # Issues management
-│   │   ├── Review.tsx      # AI review interface
-│   │   └── History.tsx     # Historical data
-│   ├── types/              # TypeScript definitions
-│   └── lib/                # Utility functions
-├── backend/                # Flask backend (create this directory)
-│   └── app.py             # Main Flask application
-└── public/                # Static assets
-```
-
-## 🔄 API Endpoints
-
-### POST `/analyze`
-Analyzes uploaded Excel file for data quality issues.
-
-**Request:**
-- `file`: Excel file (multipart/form-data)
-- `sheet_name`: Name of the Excel sheet to analyze
-
-**Response:**
-```json
-[
-  {
-    "issue": "Data quality issue description",
-    "context": {
-      "column_name": "value",
-      "result_status": "failed"
-    },
-    "remediation": {
-      "reasoning_and_remediation": "AI analysis and steps",
-      "gcp_commands": ["gcloud command 1", "gcloud command 2"]
-    }
-  }
-]
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make your changes and commit: `git commit -m 'Add feature'`
-4. Push to the branch: `git push origin feature-name`
-5. Submit a pull request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **"Module not found" errors**
-   - Ensure all dependencies are installed: `npm install`
-   - Check that Python dependencies are installed: `pip install -r requirements.txt`
-
-2. **CORS errors between frontend and backend**
-   - Ensure backend is running on the correct port
-   - Add CORS configuration to Flask if needed
-
-3. **API key errors**
-   - Verify your Google Gemini API key is valid
-   - Check that the key has proper permissions
-
-4. **File upload errors**
-   - Ensure the Excel file is properly formatted
-   - Check that the sheet name exists in the file
-
-## 📞 Support
-
-For questions and support:
-- Create an issue in this repository
-- Check the troubleshooting section above
-- Review the codebase for implementation details
-
-## 🔮 Future Enhancements
-
-- [ ] Real-time notifications for issue resolution
-- [ ] Advanced filtering and search capabilities
-- [ ] Integration with more cloud platforms (AWS, Azure)
-- [ ] Automated remediation execution
-- [ ] Multi-user support with role-based access
 - [ ] Data quality rule customization
 - [ ] Scheduled analysis and monitoring
