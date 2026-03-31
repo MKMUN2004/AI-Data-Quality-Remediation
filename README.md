@@ -90,7 +90,7 @@ The frontend will be available at `http://localhost:8080`
 
 The backend will be available at `http://localhost:5000`
 
-## 🚀 Deployment
+##  Deployment
 
 ### Frontend Deployment (Vercel/Netlify)
 
